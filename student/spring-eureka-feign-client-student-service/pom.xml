@@ -8,7 +8,6 @@
 		<artifactId>student</artifactId>
 		<version>1.0.0</version>
 	</parent>
-	<groupId>com.iovision</groupId>
 	<artifactId>spring-eureka-feign-client-student-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-eureka-feign-client-student-service</name>

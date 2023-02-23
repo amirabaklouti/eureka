@@ -14,30 +14,27 @@ import com.iovision.bookservice.models.Book;
 import com.iovision.bookservice.services.BookService;
 
 @RestController
-@RequestMapping("/book")
+@RequestMapping(BookService.REQUEST_ROOT)
 public class BookRestController implements BookService {
 
 	@Autowired
 	Environment environment;
 
-	@GetMapping("/data")
 	public String getBookData() {
 
 		return "data of BOOK-SERVICE, Running on port: " + environment.getProperty("local.server.port");
 	}
 
-	@GetMapping("/{id}")
+
 	public Book getBookById(@PathVariable Integer id) {
 		return new Book(id, "Head First Java", 500.75);
 	}
 
-	@GetMapping("/all")
 	public List<Book> getAllBooks() {
 		return List.of(new Book(501, "Head First Java", 439.75), new Book(502, "Spring in Action", 340.75),
 				new Book(503, "Hibernate in Action", 355.75));
 	}
 
-	@GetMapping("/entity")
 	public ResponseEntity<String> getEntityData() {
 		return new ResponseEntity<String>("Hello from BookRestController", HttpStatus.OK);
 	}

@@ -1,4 +1,4 @@
-package com.iovision.springeurekafeignclientstudentservice;
+package com.iovision;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
