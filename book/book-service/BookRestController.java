@@ -11,11 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.iovision.bookservice.models.Book;
-import com.iovision.bookservice.services.BookService;
 
 @RestController
 @RequestMapping("/book")
-public class BookRestController implements BookService {
+public class BookRestController {
 
 	@Autowired
 	Environment environment;
@@ -41,6 +40,5 @@ public class BookRestController implements BookService {
 	public ResponseEntity<String> getEntityData() {
 		return new ResponseEntity<String>("Hello from BookRestController", HttpStatus.OK);
 	}
-
 
 }

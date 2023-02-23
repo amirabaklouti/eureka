@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.iovision.studentservice.services.BookRestConsumer;
+import com.iovision.bookservice.services.BookService;
 
 
 @RestController
@@ -15,7 +15,7 @@ import com.iovision.studentservice.services.BookRestConsumer;
 public class StudentRestController {
 
 	@Autowired
-	private BookRestConsumer consumer;
+	private BookService consumer;
 
 	@GetMapping("/data")
 	public String getStudentInfo() {
